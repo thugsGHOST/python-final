@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container {
+            width: 70%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin: 20px auto; /* Center the container horizontally */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #ffa500;
+        }
+
+        .menu-section {
+            margin: 20px 0;
+        }
+
+        h3 {
+            background-color: #ffa500;
+            padding: 10px;
+            margin: 0 -20px 20px -20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .menu-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #555;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .contact-info strong {
+            display: block;
+            margin: 5px 0;
+        }
+
+        a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #ff6347; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e5533d; 
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>FOOD MENU</h1>
+        <!-- <h2>Pauceck and Lage Restaurant</h2> -->
+        
+        <div class="menu-section">
+            <h3>Main Course</h3>
+            <div class="menu-content">
+                <ul>
+                    <li>Cheeseburger<span>₹120</span></li>
+                    <li>Cheese sandwich<span>₹150</span></li>
+                    <li>Chicken burgers<span>₹230</span></li>
+                    <li>Spicy chicken<span>₹90</span></li>
+                    <li>Hot dog<span>₹70</span></li>
+                </ul>
+                <img src="../static/images/f1.jpeg" alt="Main Course Image">
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h3>Appetizers</h3>
+            <div class="menu-content">
+                <ul>
+                    <li>Fruit Salad<span>₹30</span></li>
+                    <li>Cocktails<span>₹120</span></li>
+                    <li>Nuggets<span>₹140</span></li>
+                    <li>Sandwich<span>₹130</span></li>
+                    <li>French Fries<span>₹150</span></li>
+                </ul>
+                <img src="../static/images/f2.jpeg" alt="Appetizers Image">
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h3>Beverages</h3>
+            <div class="menu-content">
+                <ul>
+                    <li>Milk Shake<span>₹60</span></li>
+                    <li>Ice Tea<span>₹40</span></li>
+                    <li>Orange Juice<span>₹70</span></li>
+                    <li>Lemon Tea<span>₹50</span></li>
+                    <li>Coffee<span>₹50</span></li>
+                </ul>
+                <img src="../static/images/f3.jpeg" alt="Beverages Image">
+            </div>
+        </div>
+        <center> <a href="gms_html.html" class="btn">Print BILL</a></center>
+        
+        <div class="contact-info">
+            <p><strong>📞 123-456-7890</strong> | <strong>🏠 123 RV UNIVERSITY, BENGALURU</strong></p>
+        </div>
+    </div>
+</body>
+</html>

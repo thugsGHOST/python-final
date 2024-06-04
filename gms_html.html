@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Management System</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/1a.jpeg') }}");
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            /* background-color: rgb(235, 30, 153); */
+            font-weight: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section h2 {
+            text-align: center;
+            color: rgb(254, 254, 254);
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: cyan;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Restaurant Management System</h1>
+    <form method="POST" action="{{ url_for('form_submit') }}">
+        <div class="form-section">
+            <h2>Customer Details</h2>
+            <label for="billNumber" style="color: rgb(255, 255, 255);">Bill Number:</label>
+            <input type="text" id="billNumber" name="billNumber" value="{{ b }}">
+            <br>
+            <label for="billDate" style="color: rgb(255, 255, 255);">Bill Date:</label>
+            <input type="text" id="billDate" name="billDate" value="{{ d }}">
+            <br>
+            <label for="customerId" style="color: rgb(255, 254, 254);">Customer Name:</label>
+            <input type="text" id="customerId" name="customerId" value="{{ n }}">
+            <br>
+            <label for="phoneNumber" style="color: rgb(246, 241, 241);">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" value="{{ no }}">
+        </div>
+        <div class="form-section">
+            <h2>Food Details</h2>
+            <label for="itemName" style="color: rgb(255, 255, 255);">Foods Name:</label>
+            <input type="text" id="itemName" name="itemName" value="{{ i }}">
+            <br>
+            <label for="price" style="color: rgb(245, 249, 253);">Food Price:</label>
+            <input type="text" id="price" name="price" value="{{ p }}">
+            <br>
+            <label for="quantity" style="color: rgb(255, 255, 255);">Total Food Quantity:</label>
+            <input type="text" id="quantity" name="quantity" value="{{ q }}">
+        </div>
+        <div class="form-section">
+            <h2>Bill Details</h2>
+            <textarea name="billDetails" rows="15" cols="50" readonly>{{ g }}</textarea>
+        </div>
+        <div class="form-section">
+            <input type="submit" name="action_button" value="Save Details">
+            <input type="submit" name="action_button" value="Add an Item">
+            <input type="submit" name="action_button" value="Delete an Item">
+            <input type="submit" name="action_button" value="Generate Bill">
+        </div>
+    </form>
+</body>
+</html>
